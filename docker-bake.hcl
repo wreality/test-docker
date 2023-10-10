@@ -22,7 +22,7 @@ target "fpm" {
     VERSION_DATE = "${VERSION_DATE}"
   }
   labels = {
-    org.opencontainers.image.description = "Pilcrow FPM Container Image version: ${ VERSION }@${VERSION_DATE } (${ VERSION_URL })"
+    "org.opencontainers.image.description" = "Pilcrow FPM Container Image version: ${ VERSION }@${VERSION_DATE } (${ VERSION_URL })"
   }
 
 }
@@ -36,7 +36,7 @@ target "web" {
     VERSION_DATE = "${VERSION_DATE}"
   }
   labels = {
-    org.opencontainers.image.description = "Pilcrow WEB Container Image version: ${ VERSION }@${VERSION_DATE } (${ VERSION_URL })"
+    "org.opencontainers.image.description" = "Pilcrow WEB Container Image version: ${ VERSION }@${VERSION_DATE } (${ VERSION_URL })"
   }
 }
 
