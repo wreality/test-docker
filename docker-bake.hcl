@@ -15,7 +15,6 @@ variable "GITHUB_REF_NAME" {
 }
 
 target "fpm" {
-  inherits =  ["_defaults"]
   context = "backend"
   args = {
     VERSION = "${VERSION}"
@@ -26,7 +25,6 @@ target "fpm" {
 
 
 target "web" {
-  inherits =  ["_defaults"]
   context = "client"
   args = {
     VERSION = "${VERSION}"
@@ -37,17 +35,14 @@ target "web" {
 
 
 target "fpm-release" {
-  inherits = ["fpm", "_release"]
+  inherits = ["fpm"]
   output = ["type=image,push=true,annotation.org.opencontainers.image.description=Pilcrow FPM Container Image version: ${ VERSION }@${VERSION_DATE } (${ VERSION_URL })"]
 }
 
 target "web-release" {
-  inherits = ["web", "_release"]
+  inherits = ["web"]
   platforms = ["linux/amd64", "linux/arm64"]
   output = ["type=image,push=true,annotation.org.opencontainers.image.description=Pilcrow WEB Container Image version: ${ VERSION }@${VERSION_DATE } (${ VERSION_URL })"]
-}
-
-target "_release" {
 }
 
 group "default" {
