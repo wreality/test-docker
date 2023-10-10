@@ -32,8 +32,6 @@ runs:
               type=semver,pattern={{version}},enable=${{ inputs.target == 'release' }}
               type=semver,pattern={{major}}.{{minor}},enable=${{ inputs.target == 'release' }}
               type=sha
-            labels: |
-              org.opencontainers.image.description=Pilcrow FPM Container Image version: ${{ env.VERSION }}@${{env.VERSIONDATE }} (${{ env.VERSION_URL }})
             bake-target: fpm
         - name: Docker meta (WEB)
           id: docker-meta-web
@@ -47,14 +45,10 @@ runs:
               type=semver,pattern={{major}}.{{minor}},enable=${{ inputs.target == 'release' }}
               type=sha
             bake-target: web
-            labels: |
-              org.opencontainers.image.description=Pilcrow WEB (Proxy/Nginx) Container Image version: ${{ env.VERSION }}@${{env.VERSIONDATE }} (${{ env.VERSION_URL }})
         - name: Build and push
           uses: docker/bake-action@v4
           with:
             pull: true
-            provenance: false
-            sbom: false
             targets: ${{ inputs.target }}
             files: |
               ./docker-bake.hcl
