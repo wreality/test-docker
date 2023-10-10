@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.12.0](https://github.com/wreality/test-docker/compare/v0.11.0...v0.12.0) (2023-10-10)
+
+
+### Features
+
+* publish sha image and load for testing ([259a7f3](https://github.com/wreality/test-docker/commit/259a7f3278c80ddd244536a447d0f0b6000b5bbe))
+
+
+### Bug Fixes
+
+* incorrect lcation ([0625302](https://github.com/wreality/test-docker/commit/06253027112593496fd3135e34817fdf617733bd))
+* move login command ([1f4a397](https://github.com/wreality/test-docker/commit/1f4a397b4f3d3402ebd0854b79f9173d22736435))
+* remove extra stanzas ([3ba6fb3](https://github.com/wreality/test-docker/commit/3ba6fb37146583a755d70af9190316bc539e6419))
+* trigger build ([5fefa6d](https://github.com/wreality/test-docker/commit/5fefa6db49cd8e2ea68238c1938867066f2cbfbb))
+* update deps ([eb934f6](https://github.com/wreality/test-docker/commit/eb934f6a3fe70a10f144c2fb8be07d72e06619fd))
+
 ## [0.11.0](https://github.com/wreality/test-docker/compare/v0.10.1...v0.11.0) (2023-10-10)
 
 
