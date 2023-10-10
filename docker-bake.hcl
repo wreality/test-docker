@@ -21,8 +21,8 @@ target "fpm" {
     VERSION_URL = "${VERSION_URL}"
     VERSION_DATE = "${VERSION_DATE}"
   }
-  annotations-index = {
-    "org.opencontainers.image.description" = "Pilcrow FPM Container Image version: ${ VERSION }@${VERSION_DATE } (${ VERSION_URL })"
+  annotation-index = {
+    "-index.org.opencontainers.image.description" = "Pilcrow FPM Container Image version: ${ VERSION }@${VERSION_DATE } (${ VERSION_URL })"
   }
 }
 
@@ -34,7 +34,7 @@ target "web" {
     VERSION_URL = "${VERSION_URL}"
     VERSION_DATE = "${VERSION_DATE}"
   }
-  annotations-index = {
+  annotation-index = {
     "org.opencontainers.image.description" = "Pilcrow WEB Container Image version: ${ VERSION }@${VERSION_DATE } (${ VERSION_URL })"
   }
 }
