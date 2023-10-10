@@ -51,10 +51,10 @@ runs:
               org.opencontainers.image.description=Pilcrow WEB (Proxy/Nginx) Container Image version: ${{ env.VERSION }}@${{env.VERSIONDATE }} (${{ env.VERSION_URL }})
         - name: Build and push
           uses: docker/bake-action@v4
-          env:
-            BUILDX_NO_DEFAULT_ATTESTATIONS: 1
           with:
             pull: true
+            provenance: false
+            sbom: false
             targets: ${{ inputs.target }}
             files: |
               ./docker-bake.hcl
