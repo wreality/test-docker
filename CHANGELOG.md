@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.13.0](https://github.com/wreality/test-docker/compare/v0.12.0...v0.13.0) (2023-10-10)
+
+
+### Features
+
+* re-enable attestations ([0572376](https://github.com/wreality/test-docker/commit/0572376e4fd96c11dd708c5fb209e2df5e6a4995))
+
+
+### Bug Fixes
+
+* another attempt ([f11b9a6](https://github.com/wreality/test-docker/commit/f11b9a679e8877c860411e49150ff286951e6fb6))
+* attempt to fix annotations ([803b297](https://github.com/wreality/test-docker/commit/803b29752f360ba265f0329d83d7dad2f67fa017))
+* disable default attestations ([56b3661](https://github.com/wreality/test-docker/commit/56b3661b36dbfda7ffa9da14cb04b6b015adb7c6))
+* incorrect plural ([5611f0d](https://github.com/wreality/test-docker/commit/5611f0dc42028d6eea546eb64d1ccc53dbddee42))
+* maybe... maybe.... ([4e3fbf4](https://github.com/wreality/test-docker/commit/4e3fbf40c65bc0904e5beeba0243fb2cd4f4e2b6))
+* more attempts ([2958a30](https://github.com/wreality/test-docker/commit/2958a30c762f97819acb4bb681dd4d704a34de96))
+* quoting ([ac37cba](https://github.com/wreality/test-docker/commit/ac37cba0c9ba9ff206c251b271fbafdcf504758f))
+
 ## [0.12.0](https://github.com/wreality/test-docker/compare/v0.11.0...v0.12.0) (2023-10-10)
 
 
