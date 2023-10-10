@@ -28,7 +28,7 @@ jobs:
       - run: docker compose down
   publish-images:
     runs-on: ubuntu-latest
-    needs: build-images
+    needs: [build-images, test-stack]
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
