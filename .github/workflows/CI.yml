@@ -4,7 +4,7 @@ on:
   merge_group:
   push:
     branches:
-      - master
+      - main
       - renovate/*
 
 jobs:
@@ -64,9 +64,9 @@ jobs:
       #     gzip -c /tmp/fpm.tar > /tmp/fpm.tar.gz
       #   shell: bash
       #   if: ${{ inputs.target == 'ci' }}
-      - name: Upload artifact
-        if: ${{ inputs.target == 'ci' }}
-        uses: actions/upload-artifact@v3
-        with:
-          name: Docker Images
-          path: /tmp/*.tar
+      # - name: Upload artifact
+      #   if: ${{ inputs.target == 'ci' }}
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: Docker Images
+      #     path: /tmp/*.tar
