@@ -21,6 +21,9 @@ target "fpm" {
     VERSION_URL = "${VERSION_URL}"
     VERSION_DATE = "${VERSION_DATE}"
   }
+  annotations = {
+    "org.opencontainers.image.description" = "Pilcrow FPM Container Image version: ${ VERSION }@${VERSION_DATE } (${ VERSION_URL })"
+  }
 }
 
 
@@ -31,18 +34,21 @@ target "web" {
     VERSION_URL = "${VERSION_URL}"
     VERSION_DATE = "${VERSION_DATE}"
   }
+  annotations = {
+    "org.opencontainers.image.description" = "Pilcrow WEB Container Image version: ${ VERSION }@${VERSION_DATE } (${ VERSION_URL })"
+  }
 }
 
 
 target "fpm-release" {
   inherits = ["fpm"]
-  output = ["type=image,push=true,annotation.org.opencontainers.image.description=Pilcrow FPM Container Image version: ${ VERSION }@${VERSION_DATE } (${ VERSION_URL })"]
+  output = ["type=image,push=true"]
 }
 
 target "web-release" {
   inherits = ["web"]
   platforms = ["linux/amd64", "linux/arm64"]
-  output = ["type=image,push=true,annotation.org.opencontainers.image.description=Pilcrow WEB Container Image version: ${ VERSION }@${VERSION_DATE } (${ VERSION_URL })"]
+  output = ["type=image,push=true"]
 }
 
 group "default" {
