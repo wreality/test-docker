@@ -1,0 +1,16 @@
+name: "Start Testing Stack"
+inputs:
+  version:
+    description: "The image version to use."
+    required: true
+description: "Start the default testing stack."
+runs:
+    using: "composite"
+    steps:
+        - uses: actions/checkout@v3
+        - run: |
+              docker compose up -d --quiet-pull
+          env:
+            TAG: ${{ inputs.version}}
+          shell: bash
+

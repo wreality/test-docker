@@ -18,5 +18,8 @@
     "titleBar.inactiveBackground": "#b7fe3899",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.remoteColor": "#b7fe38"
+  "peacock.remoteColor": "#b7fe38",
+  "files.associations": {
+    "*.yaml": "home-assistant"
+  }
 }

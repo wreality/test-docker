@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  web:
+    image: ghcr.io/wreality/test-docker/web:${TAG:-latest}
+  fpm:
+    image: ghcr.io/wreality/test-docker/fpm:${TAG:-latest}
